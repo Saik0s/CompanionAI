@@ -1,0 +1,4996 @@
+{
+  "externalProjects" : [
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "CasePaths",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "CasePaths",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/Sources\/CasePaths\/CasePaths.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/Sources\/CasePaths\/EnumReflection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/Sources\/CasePaths\/XCTUnwrap.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/Sources\/CasePaths\/Operators.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/Sources\/CasePaths\/CasePath.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "CasePaths",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths\/swift-case-paths.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "otf",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-case-paths"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "Dependencies",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "CombineSchedulers",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers"
+              }
+            },
+            {
+              "project" : {
+                "target" : "Clocks",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks"
+              }
+            },
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "Dependencies",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/LockIsolated.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/MainQueue.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/Task.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/WithDependencies.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/UUID.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/Locale.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Internal\/Exports.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/Calendar.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/Clocks.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Internal\/Deprecations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/Context.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/WithRandomNumberGenerator.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyKey.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/OpenURL.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/ActorIsolated.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Internal\/OpenExistential.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Internal\/TypeName.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/MainRunLoop.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Internal\/RuntimeWarnings.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/Date.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/TimeZone.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/UncheckedSendable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/AsyncThrowingStream.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/ConcurrencySupport\/AsyncStream.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/FireAndForget.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyValues\/URLSession.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Dependency.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/DependencyContext.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/Sources\/Dependencies\/Documentation.docc"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "Dependencies",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies\/swift-dependencies.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "strings",
+            "stringsdict"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "ttf",
+            "otf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-dependencies"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.13"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "IdentifiedCollections",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "OrderedCollections",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "IdentifiedCollections",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+CollectionAlgorithms.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+CustomDebugStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Insertions.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/Documentation.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+CustomReflectable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+RangeReplaceableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+RandomAccessCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Collection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+CustomStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Equatable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Codable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+ExpressibleByArrayLiteral.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+MutableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Initializers.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Sendable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/Sources\/IdentifiedCollections\/IdentifiedArray\/IdentifiedArray+Hashable.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "IdentifiedCollections",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections\/swift-identified-collections.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "otf",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-identified-collections"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "XCTestDynamicOverlay",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "XCTestDynamicOverlay",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Internal\/DefaultInitializable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Unimplemented.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Internal\/RuntimeWarnings.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/XCTFail.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Documentation.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/XCTIsTesting.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Internal\/XCTCurrentTestCase.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Internal\/GeneratePlaceholder.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/Sources\/XCTestDynamicOverlay\/Internal\/Deprecations.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "XCTestDynamicOverlay",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay\/xctest-dynamic-overlay.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "otf",
+            "ttc",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "xctest-dynamic-overlay"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "Clocks",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "Clocks",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Shims.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/SwiftUI.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/ImmediateClock.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Timer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Internal\/_AsyncTimerSequence.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/UnimplementedClock.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Documentation.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Internal\/Lock.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/Internal\/Yield.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/AnyClock.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/Sources\/Clocks\/TestClock.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "Clocks",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks\/swift-clocks.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "strings",
+            "stringsdict"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "otf",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-clocks"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.13"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "DynamicColor",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "DynamicColor",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/Utils.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/SwiftUIColor.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+Lab.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColorSpace.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/ContrastDisplayContext.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+Deriving.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+RGBA.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+HSB.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+XYZ.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+Mixing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicGradient.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/DynamicColor+HSL.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/Array.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/Sources\/HSL.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "DynamicColor",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor\/DynamicColor.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "otf",
+            "ttf",
+            "ttc"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "DynamicColor"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "12.0"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "AppDevUtils",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "ComposableArchitecture",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture"
+              }
+            },
+            {
+              "project" : {
+                "target" : "DynamicColor",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "AppDevUtils",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/FontPreview.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/TCAExtensions\/ReducerProtocol+onChange.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/DesignSystem\/ColorPalette.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/URLRequest+cURL.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Result++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/TCAExtensions\/Identified.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/Views\/ActivityIndicator.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/RightToLeftPreview.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/AppDevUtils.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/Resulting.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/URL+file.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/View+readSize.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/UIViewRepresenting.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/DictionaryExtensions.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/Logging.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/Views\/ShareSheet.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/String++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/Border.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/DarkThemePreview.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Encodable++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/CGRect++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/CGSize++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/Color++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/View++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/View+animate.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/DebouncingTaskViewModifier.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/RoundedCorner.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/URL+staticString.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/ForEach.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Data++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/CGFloat++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/ContinuousCornerRadius.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/View+onWillDisappear.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/UIApplicationExtensions.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/UIViewController++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/Create.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/UIApplication++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/View+PreviewPresets.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/TCAExtensions\/StateWithContext.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/DesignSystem\/Fonts.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Sequence++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/WithInlineState.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/CGPoint++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Double+equal.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/DecodableExtensions.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/Views\/ExpandableText.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/Gradients.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/LocalePreview.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Dictionary++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Task++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/PreviewPresets\/ContentSizeCategoryPreview.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Collection++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Occupiable+isNotEmpty.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/CustomAssert.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Optional++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Codable++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/TCAExtensions\/AnyReducer+Subscriptions.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Publisher++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Array++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Binding++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/SwiftUIHelpers\/FrameSize.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/DateFormatter++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Publisher+genericError.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/UI\/DesignSystem\/Grid.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/Then.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Extensions\/Double++.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/Sources\/AppDevUtils\/Helpers\/ReplaySubject.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "AppDevUtils",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils\/AppDevUtils.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "otf",
+            "ttf",
+            "ttc"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "AppDevUtils"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "CombineSchedulers",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "CombineSchedulers",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/Concurrency.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/AnyScheduler.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/ImmediateScheduler.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/Timer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/SwiftUI.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/UIKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/UIScheduler.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/TestScheduler.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/Internal\/Deprecations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/UnimplementedScheduler.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/Internal\/Lock.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/Sources\/CombineSchedulers\/Internal\/NSRecursiveLock.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "CombineSchedulers",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers\/combine-schedulers.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "strings",
+            "stringsdict"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttf",
+            "otf",
+            "ttc"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "combine-schedulers"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "-SwiftUINavigationState",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "CasePaths",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths"
+              }
+            },
+            {
+              "project" : {
+                "target" : "CustomDump",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "_SwiftUINavigationState",
+          "settings" : {
+            "base" : {
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/_SwiftUINavigationState\/TextState.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/_SwiftUINavigationState\/AlertState.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/_SwiftUINavigationState\/ButtonStateBuilder.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/_SwiftUINavigationState\/ButtonState.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/_SwiftUINavigationState\/ConfirmationDialogState.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "_SwiftUINavigationState",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        },
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "SwiftUINavigation",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "_SwiftUINavigationState"
+              }
+            },
+            {
+              "project" : {
+                "target" : "CasePaths",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths"
+              }
+            },
+            {
+              "project" : {
+                "target" : "CustomDump",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump"
+              }
+            },
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "SwiftUINavigation",
+          "settings" : {
+            "base" : {
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Binding.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Internal\/Deprecations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/WithState.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Documentation.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Internal\/Exports.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/NavigationLink.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/NavigationDestination.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Internal\/Binding+Internal.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Switch.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/ConfirmationDialog.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Bind.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/IfLet.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Internal\/RuntimeWarnings.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/IfCaseLet.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Alert.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Popover.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/Sheet.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/Sources\/SwiftUINavigation\/FullScreenCover.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "SwiftUINavigation",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation\/swiftui-navigation.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "strings",
+            "stringsdict"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "ttf",
+            "otf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swiftui-navigation"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "CustomDump",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "CustomDump",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/UserNotificationsUI.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Dump.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/Foundation.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Internal\/Box.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/UIKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/CoreImage.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/KeyPath.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/SwiftUI.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Internal\/AnyType.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/CoreLocation.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/Photos.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Internal\/String.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/CustomDumpRepresentable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Internal\/CollectionDifference.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/StoreKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/CustomDumpReflectable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/GameKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/XCTAssertNoDifference.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/Speech.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/Swift.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Internal\/Mirror.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Diff.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/CoreMotion.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/Conformances\/UserNotifications.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/Sources\/CustomDump\/CustomDumpStringConvertible.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "CustomDump",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump\/swift-custom-dump.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "ttc",
+            "ttf",
+            "otf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-custom-dump"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.13"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "Collections",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "DequeModule"
+              }
+            },
+            {
+              "target" : {
+                "name" : "OrderedCollections"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "Collections",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/Collections\/Collections.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/Collections\/Collections.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "Collections",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        },
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.13"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "DequeModule",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "DequeModule",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+ExpressibleByArrayLiteral.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Equatable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/_UnsafeWrappedBuffer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque._Storage.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+CustomReflectable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/_DequeSlot.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Codable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Hashable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+CustomDebugStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Compatibility.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/_DequeBuffer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque._UnsafeHandle.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Testing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+CustomStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/DequeModule.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Collection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/_DequeBufferHeader.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/Deque+Extras.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/DequeModule\/UnsafeMutableBufferPointer+Utilities.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "DequeModule",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        },
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.13"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "OrderedCollections",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "OrderedCollections",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Invariants.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+Bucket.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+ExpressibleByDictionaryLiteral.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Deprecations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+CustomStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Codable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+UnorderedView.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Partial RangeReplaceableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Equatable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedCollections.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Initializers.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Partial SetAlgebra+Operations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_Hashtable+Header.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/Utilities\/_UnsafeBitset.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Values.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Partial MutableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Hashable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+Testing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+ReserveCapacity.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+CustomReflectable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+SubSequence.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+CustomStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+ExpressibleByArrayLiteral.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+RandomAccessCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Initializers.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Codable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/Utilities\/RandomAccessCollection+Offsets.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+CustomDebugStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Sequence.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Partial MutableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Testing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+Constants.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+CustomReflectable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Partial SetAlgebra+Basics.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+UnstableInternals.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Partial RangeReplaceableCollection.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+CustomDebugStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+UnsafeHandle.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Diffing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Elements.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/HashTable\/_HashTable+BucketIterator.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Equatable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Partial SetAlgebra+Predicates.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Elements+SubSequence.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+CustomStringConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Hashable.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedDictionary\/OrderedDictionary+Invariants.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/Sources\/OrderedCollections\/OrderedSet\/OrderedSet+Insertions.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "OrderedCollections",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections\/swift-collections.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "otf",
+            "ttc",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-collections"
+    },
+    "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture",
+    {
+      "sourceRootPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture",
+      "options" : {
+        "automaticSchemesOptions" : {
+          "disabled" : {
+
+          }
+        },
+        "disableShowEnvironmentVarsInScriptPhases" : false,
+        "disableBundleAccessors" : false,
+        "disableSynthesizedResourceAccessors" : true,
+        "textSettings" : {
+
+        }
+      },
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "macOS" : {
+              "_0" : "10.15"
+            }
+          },
+          "prune" : false,
+          "bundleId" : "ComposableArchitecture",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "project" : {
+                "target" : "CasePaths",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths"
+              }
+            },
+            {
+              "project" : {
+                "target" : "CombineSchedulers",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers"
+              }
+            },
+            {
+              "project" : {
+                "target" : "CustomDump",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump"
+              }
+            },
+            {
+              "project" : {
+                "target" : "Dependencies",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies"
+              }
+            },
+            {
+              "project" : {
+                "target" : "IdentifiedCollections",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections"
+              }
+            },
+            {
+              "project" : {
+                "target" : "_SwiftUINavigationState",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation"
+              }
+            },
+            {
+              "project" : {
+                "target" : "XCTestDynamicOverlay",
+                "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+              }
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "ComposableArchitecture",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE"
+                  ]
+                }
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "SWIFT_PACKAGE=1"
+                  ]
+                }
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "array" : {
+                  "_0" : [
+                    "$(inherited)",
+                    "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                  ]
+                }
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "USE_HEADERMAP" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "string" : {
+                  "_0" : "NO"
+                }
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "string" : {
+                  "_0" : "YES"
+                }
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "recommended" : {
+                "excluding" : [
+
+                ]
+              }
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "macos",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/WithViewStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Documentation.docc"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Exports.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/DebugReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/DependencyKeyWritingReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/IfLetStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/TaskResult.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/Reduce.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Binding+IsPresent.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Publisher\/Timer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/TaskCancellableValue.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/ReducerProtocol.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/CombineReducers.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/Binding.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/CurrentValueRelay.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/IfLetReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/ForEachReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/UIKit\/AlertStateUIKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/ConfirmationDialog.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Publisher\/Debouncing.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/OpenExistential.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/AnyReducer\/AnyReducerSignpost.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Animation.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/TestStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Publisher.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Cancellation.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/SwitchStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/UIKit\/IfLetUIKit.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/Scope.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/Alert.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/AnyReducer\/AnyReducerDebug.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/TypeName.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effect.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/Optional.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/RuntimeWarnings.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Box.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/Identified.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Locking.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Create.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Store.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/AnyReducer\/AnyReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Publisher\/Throttling.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/SignpostReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Debug.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/EmptyReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/AnyReducer\/AnyReducerCompatibility.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/ReducerBuilder.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/ViewStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/AnyReducer\/AnyReducerBinding.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Effects\/Publisher\/Deferring.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Internal\/Deprecations.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/SwiftUI\/ForEachStore.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/BindingReducer.swift"
+            },
+            {
+              "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/Sources\/ComposableArchitecture\/Reducer\/Reducers\/IfCaseLetReducer.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "ComposableArchitecture",
+          "filesGroup" : {
+            "group" : {
+              "name" : "Project"
+            }
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "extendingDefault" : {
+              "with" : {
+
+              }
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+
+        },
+        "configurations" : [
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "recommended" : {
+            "excluding" : [
+
+            ]
+          }
+        }
+      },
+      "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture",
+      "isExternal" : true,
+      "filesGroup" : {
+        "group" : {
+          "name" : "Project"
+        }
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture\/swift-composable-architecture.xcodeproj",
+      "resourceSynthesizers" : [
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Strings"
+            }
+          },
+          "parser" : "strings",
+          "extensions" : [
+            "stringsdict",
+            "strings"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Assets"
+            }
+          },
+          "parser" : "assets",
+          "extensions" : [
+            "xcassets"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Plists"
+            }
+          },
+          "parser" : "plists",
+          "extensions" : [
+            "plist"
+          ]
+        },
+        {
+          "template" : {
+            "defaultTemplate" : {
+              "_0" : "Fonts"
+            }
+          },
+          "parser" : "fonts",
+          "extensions" : [
+            "otf",
+            "ttc",
+            "ttf"
+          ]
+        }
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "swift-composable-architecture"
+    }
+  ],
+  "externalDependencies" : [
+    "macos",
+    {
+      "Collections" : [
+        {
+          "project" : {
+            "target" : "Collections",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections"
+          }
+        }
+      ],
+      "DynamicColor" : [
+        {
+          "project" : {
+            "target" : "DynamicColor",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/DynamicColor"
+          }
+        }
+      ],
+      "CustomDump" : [
+        {
+          "project" : {
+            "target" : "CustomDump",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-custom-dump"
+          }
+        }
+      ],
+      "CombineSchedulers" : [
+        {
+          "project" : {
+            "target" : "CombineSchedulers",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/combine-schedulers"
+          }
+        }
+      ],
+      "IdentifiedCollections" : [
+        {
+          "project" : {
+            "target" : "IdentifiedCollections",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-identified-collections"
+          }
+        }
+      ],
+      "OrderedCollections" : [
+        {
+          "project" : {
+            "target" : "OrderedCollections",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections"
+          }
+        }
+      ],
+      "CasePaths" : [
+        {
+          "project" : {
+            "target" : "CasePaths",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-case-paths"
+          }
+        }
+      ],
+      "SwiftUINavigation" : [
+        {
+          "project" : {
+            "target" : "SwiftUINavigation",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation"
+          }
+        }
+      ],
+      "XCTestDynamicOverlay" : [
+        {
+          "project" : {
+            "target" : "XCTestDynamicOverlay",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/xctest-dynamic-overlay"
+          }
+        }
+      ],
+      "AppDevUtils" : [
+        {
+          "project" : {
+            "target" : "AppDevUtils",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/AppDevUtils"
+          }
+        }
+      ],
+      "Clocks" : [
+        {
+          "project" : {
+            "target" : "Clocks",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-clocks"
+          }
+        }
+      ],
+      "DequeModule" : [
+        {
+          "project" : {
+            "target" : "DequeModule",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-collections"
+          }
+        }
+      ],
+      "_SwiftUINavigationState" : [
+        {
+          "project" : {
+            "target" : "_SwiftUINavigationState",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swiftui-navigation"
+          }
+        }
+      ],
+      "ComposableArchitecture" : [
+        {
+          "project" : {
+            "target" : "ComposableArchitecture",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-composable-architecture"
+          }
+        }
+      ],
+      "Dependencies" : [
+        {
+          "project" : {
+            "target" : "Dependencies",
+            "path" : "\/Users\/igort\/Documents\/Projects\/CompanionAI\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/swift-dependencies"
+          }
+        }
+      ]
+    }
+  ]
+}
