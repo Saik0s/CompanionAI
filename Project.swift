@@ -1,4 +1,6 @@
+import Foundation
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 func target(name: String) -> Target {
   Target(
@@ -6,6 +8,7 @@ func target(name: String) -> Target {
     platform: .macOS,
     product: .app,
     bundleId: "me.igortarasenko.\(name)",
+    deploymentTarget: .macOS(targetVersion: "13.0"),
     infoPlist: .default,
     sources: .paths([.relativeToManifest("Sources/**")]),
     resources: [
@@ -14,7 +17,8 @@ func target(name: String) -> Target {
     dependencies: [
       .external(name: "AppDevUtils"),
     ],
-    settings: .settings(base: ["CODE_SIGN_IDENTITY": "", "CODE_SIGNING_REQUIRED": "NO"])
+    settings: .settings(base: ["CODE_SIGN_IDENTITY": "", "CODE_SIGNING_REQUIRED": "NO"]),
+    environment: ["OPENAI_API_KEY": OPENAI_API_KEY]
   )
 }
 
