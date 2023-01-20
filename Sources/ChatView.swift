@@ -1,11 +1,7 @@
-//
-// Created by Igor Tarasenko on 20/01/2023.
-//
-
-import SwiftUI
-import Inject
 import AppDevUtils
-
+import Inject
+import OpenAI
+import SwiftUI
 
 // MARK: - TextCompletion
 
@@ -31,24 +27,26 @@ struct TextCompletion: Codable {
   }
 }
 
-// MARK: - ContentViewModel
+// MARK: - ChatViewModel
 
 @MainActor
 class ChatViewModel: ObservableObject {
-  @Published var bot: Bot = .init(name: "PM")
-  @Published var user: User = .init(name: "Client")
   @Published var conversation: Conversation = .init()
   @Published var currentInput: String = ""
+  @Published var isLoading: Bool = false
 
-  init() {
-    conversation.participants = [.bot(bot), .user(user)]
-  }
+  var openAI: OpenAI { Dependencies.openAI }
 
   func sendButtonTap() {
-    guard !currentInput.isEmpty else { return }
-    Task {
-      await send(currentInput)
+    guard !currentInput.isEmpty, !isLoading else { return }
+    let oldInput = currentInput
+    withAnimation {
       currentInput = ""
+      isLoading = true
+      Task {
+        await send(oldInput)
+        isLoading = false
+      }
     }
   }
 
@@ -58,19 +56,16 @@ class ChatViewModel: ObservableObject {
   }
 
   func sendMessage(_ message: String) {
-    let newMessage = Message(text: message, participant: .user(user), timestamp: Date().timeIntervalSince1970)
+    let newMessage = Message(text: message, participant: .user(conversation.user), timestamp: Date().timeIntervalSince1970)
     conversation.messages.append(newMessage)
   }
 
   func receiveMessage(_ message: String) {
-    let newMessage = Message(text: message, participant: .bot(bot), timestamp: Date().timeIntervalSince1970)
+    let newMessage = Message(text: message, participant: .bot(conversation.bot), timestamp: Date().timeIntervalSince1970)
     conversation.messages.append(newMessage)
   }
 
   private func askDavinci() async {
-    let apiURL = URL(string: "https://api.openai.com/v1/completions")!
-    let apiKey = ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!
-
     let chat = conversation.messages
       .map { $0.participant.name + ": " + $0.text }
       .joined(separator: "\n\n")
@@ -83,70 +78,109 @@ class ChatViewModel: ObservableObject {
       PM: As a product manager, I am ready to take on the development of a new mobile app. I will be provided with a brief description of the app's features and target audience, and it is my responsibility to create a detailed plan for the app's development. This will include a marketing strategy, a development schedule, and a list of potential monetization options. I will also identify potential features and improvements that can be added to the app in the future. Additionally, I will be able to recognize potential risks and come up with a plan to mitigate them. My approach will be to provide clear and concise responses without any additional explanations. What will be my first task?
       \(chat)
 
-      \(bot.name):
+      \(conversation.bot.name):
       """
-
-    let body: [String: Any] = [
-      "model": "text-davinci-003",
-      "prompt": prompt + "\n",
-      "temperature": 0.7,
-      "max_tokens": 700,
-      "top_p": 1,
-      "frequency_penalty": 0,
-      "presence_penalty": 0,
-      "stop": "",
-    ]
-
-    var request = URLRequest(url: apiURL)
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-    request.httpMethod = "POST"
-    request.httpBody = try! JSONSerialization.data(withJSONObject: body)
-    log(body)
-
-    let (data, _) = try! await URLSession.shared.data(for: request)
-    log(data.utf8String)
-
-    do {
-      let textCompletion = try JSONDecoder().decode(TextCompletion.self, from: data)
-      if let generatedText = textCompletion.choices.first?.text {
-        receiveMessage(generatedText)
-      } else {
-        log("No choices")
-      }
-    } catch {
-      log(error)
-
-      if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-         let error = json["error"] as? [String: Any],
-         let errorMessage = error["message"] as? String {
-        log("Error message: \(errorMessage)")
-      } else {
-        log("Error parsing response")
-      }
+    let query = OpenAI.CompletionsQuery(
+      model: .textDavinci_003,
+      prompt: prompt,
+      temperature: 0.7,
+      max_tokens: 700,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0
+    )
+    let result = try! await openAI.completions(query: query)
+    if let text = result.choices.first?.text {
+      receiveMessage(text)
+    } else {
+      log("No choices")
     }
   }
 }
 
+// MARK: - ChatView
+
 struct ChatView: View {
+  @ObserveInjection var inject
+
   @ObservedObject var viewModel = ChatViewModel()
+  @Namespace var namespace
 
   var body: some View {
     VStack(spacing: .grid(4)) {
       ScrollView {
-        VStack(spacing: .grid(2)) {
-          ForEach(viewModel.conversation.messages, content: { message in
+        VStack(spacing: .grid(4)) {
+          ForEach(viewModel.conversation.messages.reversed(), content: { message in
             MessageView(message: message)
+              .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
           })
+          if viewModel.isLoading {
+            MessageView(message: .init(text: "...", participant: .bot(viewModel.conversation.bot), timestamp: Date().timeIntervalSince1970))
+          }
         }
+        .frame(maxHeight: .infinity, alignment: .bottom)
       }
 
-      HStack {
-        TextField("Message", text: $viewModel.currentInput, onCommit: {
-          viewModel.sendButtonTap()
-        })
-        Button("Send") {
-          viewModel.sendButtonTap()
+      if viewModel.isLoading {
+        ActivityIndicator()
+          .foregroundColor(.black)
+          .frame(width: 20, height: 20)
+          .padding(.grid(2))
+          .background {
+            RoundedRectangle(cornerRadius: .grid(2))
+              .fill(Color.white)
+              .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
+          }
+          .matchedGeometryEffect(id: "input", in: namespace)
+      } else {
+        HStack(spacing: .grid(2)) {
+          TextField("Message", text: $viewModel.currentInput.removeDuplicates(), onCommit: {
+            viewModel.sendButtonTap()
+          })
+          .textFieldStyle(.plain)
+          .foregroundColor(.black)
+          Button { viewModel.sendButtonTap() } label: {
+            Image(systemName: "paperplane.fill")
+              .font(.title)
+              .foregroundColor(.white)
+              .padding(.grid(1))
+              .background {
+                RoundedRectangle(cornerRadius: .grid(2))
+                  .fill(Color.systemBlue)
+                  .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
+              }
+          }
+          .buttonStyle(.plain)
+        }
+        .padding(.vertical, .grid(2))
+        .padding(.horizontal, .grid(2))
+        .background {
+          RoundedRectangle(cornerRadius: .grid(2))
+            .fill(Color.white)
+            .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
+        }
+        .matchedGeometryEffect(id: "input", in: namespace)
+      }
+    }
+    .padding(.grid(6))
+    .background {
+      RoundedRectangle(cornerRadius: .grid(2))
+        .fill(Color.white)
+    }
+    .padding(.grid(2))
+    .enableInjection()
+  }
+}
+
+private extension OpenAI {
+  func completions(query: CompletionsQuery) async throws -> CompletionsResult {
+    try await withCheckedThrowingContinuation { continuation in
+      completions(query: query) { result in
+        switch result {
+        case let .success(result):
+          continuation.resume(returning: result)
+        case let .failure(error):
+          continuation.resume(throwing: error)
         }
       }
     }

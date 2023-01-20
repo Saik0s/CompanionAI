@@ -17,6 +17,7 @@ func target(name: String) -> Target {
     dependencies: [
       .external(name: "AppDevUtils"),
       .external(name: "Inject"),
+      .external(name: "OpenAI"),
     ],
     environment: ["OPENAI_API_KEY": OPENAI_API_KEY]
   )

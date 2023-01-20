@@ -1,9 +1,6 @@
-//
-// Created by Igor Tarasenko on 20/01/2023.
-//
-
-import SwiftUI
+import AppDevUtils
 import Inject
+import SwiftUI
 
 struct MessageView: View {
   @ObserveInjection var inject
@@ -11,26 +8,39 @@ struct MessageView: View {
   var message: Message
 
   var body: some View {
-    ZStack {
-      HStack(alignment: .top, spacing: 0) {
-        Text(message.participant.name + ": ")
+    VStack(spacing: .grid(2)) {
+      HStack(spacing: .grid(2)) {
+        if message.participant.isUser {
+          Text(message.dateString)
+            .font(.caption)
+            .foregroundColor(.gray)
+        }
+
+        Text(message.participant.name)
           .font(.caption)
-          .foregroundColor(.gray)
-        Text(message.text)
-          .font(.body)
+          .foregroundColor(.black)
+
+        if message.participant.isBot {
+          Text(message.dateString)
+            .font(.caption)
+            .foregroundColor(.gray)
+        }
       }
+      .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
+
+      Text(message.text)
+        .font(.body)
         .foregroundColor(.black)
         .padding(.grid(2))
         .background(
           RoundedRectangle(cornerRadius: .grid(2))
-            .fill(message.participant == .bot(Bot(name: "PM"))
-                    ? Color(.systemGray).lighten(by: 0.1)
-                    : Color(.systemPurple).lighten(by: 0.2))
+            .fill(message.participant.isBot
+              ? Color(.systemGray).lighten(by: 0.1)
+              : Color(.systemPurple).lighten(by: 0.2))
         )
-        .frame(maxWidth: .infinity,
-               alignment: message.participant == .bot(Bot(name: "PM")) ? .leading : .trailing)
+        .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
     }
-      .multilineTextAlignment(.leading)
-      .enableInjection()
+    .multilineTextAlignment(.leading)
+    .enableInjection()
   }
 }
