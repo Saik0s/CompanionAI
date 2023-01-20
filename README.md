@@ -1,5 +1,19 @@
-# CompanionAI
+<div align="center">
+  <a href="https://github.com/Saik0s/CompanionAI">
+    <img src=".github/logo.png" width="80">
+  </a>
 
+  <h3 align="center">CompanionAI</h3>
+
+  <p align="center">
+    Empower yourself with any custom AI companion for a better life.
+  </p>
+</div>
+<hr />
+
+<div align="center">
+<img src=".github/screenshot1.png" width="400">
+</div>
 <p>
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
     <a href="https://twitter.com/sa1k0s">
@@ -14,18 +28,25 @@ CompanionAI is a chat application that allows users to communicate with a team o
 
 </p>
 
-
 ## Installation
+
+Create `Tuist/ProjectDescriptionHelpers/Private.swift` using `Tuist/ProjectDescriptionHelpers/Private.swift.example` and add your `OPENAI_API_KEY` there.
+
+Run `make build_release` and CompanionAI.app will be ready for use in the repository root folder.
 
 ## Usage
 
 ## 🗺 Roadmap
+
+- Generate context from chat history that will be sent with every prompt
+- Ability to create different personas
 
 ## 💻 Developing
 
 ### Requirements
 
 - Xcode 14.0+
+- [Tuist](https://github.com/tuist/tuist)
 
 ## 🏷 License
 
