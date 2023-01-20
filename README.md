@@ -2,7 +2,6 @@
 
 <p>
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
-    <img src="https://github.com/Saik0s/AppDevUtils/workflows/Build%20&%20Test/badge.svg" />
     <a href="https://twitter.com/sa1k0s">
         <img src="https://img.shields.io/badge/Contact-@sa1k0s-lightgrey.svg?style=flat" alt="Twitter: @sa1k0s" />
     </a>
@@ -11,7 +10,7 @@
 
 <p align="center">
 
-Helpers and extensions for app development
+CompanionAI is a chat application that allows users to communicate with a team of AI personas designed for specific tasks. These AI personas can assist with a variety of tasks, such as product management, data analysis, and more.
 
 </p>
 
