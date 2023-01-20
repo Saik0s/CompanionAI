@@ -1,14 +1,20 @@
-import Foundation
 import Dependencies
+import Foundation
 import OpenAI
+
+// MARK: - ChatClient
 
 public struct ChatClient {
   public var generateAnswerForConversation: (Conversation) async throws -> String
 }
 
+// MARK: - ChatClientError
+
 public enum ChatClientError: Error {
   case noChoices
 }
+
+// MARK: - ChatClient + DependencyKey
 
 extension ChatClient: DependencyKey {
   public static let liveValue: Self = {

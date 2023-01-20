@@ -83,11 +83,11 @@ struct ChatView: View {
                   text.wrappedValue = text.wrappedValue == "..." ? "." : "..."
                 }
             }
-              .transition(.move(edge: .leading))
+            .transition(.move(edge: .leading))
           }
         }
       }
-        .padding(.horizontal, .grid(6))
+      .padding(.horizontal, .grid(6))
 
       ZStack {
         if viewModel.isLoading {
@@ -109,13 +109,13 @@ struct ChatView: View {
               prompt: Text("Type your message..."),
               axis: .vertical
             )
-              .lineLimit(1...)
-              .textFieldStyle(.plain)
-              // .onSubmit { viewModel.currentInput += "\n" }
-              .onSubmit { viewModel.sendButtonTap() }
-              .foregroundColor(.black)
-              .font(.DS.bodyL)
-              .padding(.vertical, .grid(2))
+            .lineLimit(1...)
+            .textFieldStyle(.plain)
+            // .onSubmit { viewModel.currentInput += "\n" }
+            .onSubmit { viewModel.sendButtonTap() }
+            .foregroundColor(.black)
+            .font(.DS.bodyL)
+            .padding(.vertical, .grid(2))
 
             Button { viewModel.sendButtonTap() } label: {
               Image(systemName: "paperplane.fill")
@@ -128,21 +128,21 @@ struct ChatView: View {
                     .fill(Color.systemBlue)
                 }
             }
-              .buttonStyle(.borderless)
-              .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
+            .buttonStyle(.borderless)
+            .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
           }
-            .padding(.horizontal, .grid(2))
-            .frame(minHeight: 50)
-            .background {
-              RoundedRectangle(cornerRadius: .grid(2))
-                .fill(Color.white)
-                .shadow(color: .black.opacity(0.3), radius: 15, y: 10)
-            }
-            .matchedGeometryEffect(id: "input", in: namespace)
+          .padding(.horizontal, .grid(2))
+          .frame(minHeight: 50)
+          .background {
+            RoundedRectangle(cornerRadius: .grid(2))
+              .fill(Color.white)
+              .shadow(color: .black.opacity(0.3), radius: 15, y: 10)
+          }
+          .matchedGeometryEffect(id: "input", in: namespace)
         }
       }
-        .padding([.horizontal, .bottom], .grid(6))
-        .frame(maxWidth: .infinity)
+      .padding([.horizontal, .bottom], .grid(6))
+      .frame(maxWidth: .infinity)
     }
     .background {
       RoundedRectangle(cornerRadius: .grid(2))

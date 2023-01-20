@@ -10,7 +10,7 @@ struct CompanionAIApp: App {
           NSApplication.shared.windows.first?.level = .floating
         }
     }
-      .defaultSize(width: 800, height: 600)
+    .defaultSize(width: 800, height: 600)
     .windowStyle(HiddenTitleBarWindowStyle())
   }
 }

@@ -25,7 +25,7 @@ struct MessageView: View {
             .foregroundColor(.systemGray)
         }
       }
-        .font(.caption)
+      .font(.caption)
 
       Text(message.text)
         .font(.body)
