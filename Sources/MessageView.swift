@@ -45,6 +45,9 @@ struct MessageView: View {
         )
     }
     .multilineTextAlignment(.leading)
+    .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
+    .transition(.asymmetric(insertion: .move(edge: .bottom),
+                            removal: .move(edge: message.participant.isBot ? .leading : .trailing)))
     .enableInjection()
   }
 }

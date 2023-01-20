@@ -1,25 +1,49 @@
 import AppDevUtils
+import ComposableArchitecture
 import Inject
 import SwiftUI
-import ComposableArchitecture
+
+extension UserDefaults {
+  var appState: AppFeature.State? {
+    get { decode(forKey: #function) }
+    set { encode(newValue, forKey: #function) }
+  }
+}
+
+// MARK: - AppFeature
 
 public struct AppFeature: ReducerProtocol {
-  public struct State: Equatable {
+  public struct State: Equatable, Codable {
+    var chat = Chat.State()
   }
 
   public enum Action: Equatable {
-    case placeholder
+    case chat(Chat.Action)
+    case task
   }
 
   public var body: some ReducerProtocol<State, Action> {
-    Reduce { state, action in
-      switch action {
-      case .placeholder:
-        return .none
+    CombineReducers {
+      Scope(state: \.chat, action: /Action.chat) { Chat() }
+
+      Reduce { _, action in
+        switch action {
+        case .chat:
+          return .none
+
+        case .task:
+          return .none
+        }
       }
+    }
+    .onChange(of: { $0 }) { _, state, _ in
+      UserDefaults.standard.appState = state
+      return .none
     }
   }
 }
+
+// MARK: - AppFeatureView
 
 public struct AppFeatureView: View {
   @ObserveInjection var inject
@@ -32,10 +56,13 @@ public struct AppFeatureView: View {
 
   public var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
-      ChatView()
+      ChatView(store: store.scope(state: { $0.chat }, action: { .chat($0) }))
+        .task {
+          viewStore.send(.task)
+        }
     }
-      .padding(.grid(1))
-      .enableInjection()
+    .padding(.grid(1))
+    .enableInjection()
   }
 }
 

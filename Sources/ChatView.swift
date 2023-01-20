@@ -1,4 +1,5 @@
 import AppDevUtils
+import ComposableArchitecture
 import Inject
 import SwiftUI
 
@@ -11,165 +12,175 @@ class ChatViewModel: ObservableObject {
   @Published var isLoading: Bool = false
 
   var chatClient: ChatClient { ChatClient.liveValue }
+}
 
-  func sendButtonTap() {
-    guard !currentInput.isEmpty, !isLoading else { return }
-    let oldInput = currentInput
-    currentInput = ""
-    withAnimation {
-      isLoading = true
+// MARK: - Chat
+
+public struct Chat: ReducerProtocol {
+  public struct State: Equatable, Codable {
+    @BindableState var conversation: Conversation = .init()
+    @BindableState var isLoading: Bool = false
+    @BindableState var chatInputField = ChatInputField.State()
+
+    enum CodingKeys: String, CodingKey {
+      case conversation
     }
-    Task {
-      await send(oldInput)
-      withAnimation {
-        isLoading = false
+  }
+
+  public enum Action: BindableAction, Equatable {
+    case binding(BindingAction<State>)
+    case chatInputField(ChatInputField.Action)
+  }
+
+  @Dependency(\.chatClient) var chatClient: ChatClient
+
+  public var body: some ReducerProtocol<State, Action> {
+    BindingReducer()
+
+    Scope(state: \.chatInputField, action: /Action.chatInputField) { ChatInputField() }
+
+    Reduce { state, action in
+      switch action {
+      case .binding:
+        return .none
+
+      case .chatInputField(.sendButtonTapped):
+        return sendButtonTap(state: &state)
+
+      case .chatInputField:
+        return .none
       }
     }
   }
 
-  private func send(_ message: String) async {
-    sendMessage(message)
-    await askDavinci()
-  }
+  private func sendButtonTap(state: inout State) -> EffectTask<Action> {
+    guard !state.chatInputField.text.isEmpty, !state.isLoading else { return .none }
 
-  private func sendMessage(_ message: String) {
-    let newMessage = Message(text: message, participant: .user(conversation.user), timestamp: Date().timeIntervalSince1970)
-    withAnimation {
+    let oldInput = state.chatInputField.text
+    state.chatInputField.text = ""
+
+    return .run { [state] send in
+      await send(.binding(.set(\.$isLoading, true)))
+
+      let newMessage = Message(text: oldInput, participant: .user(state.conversation.user), timestamp: Date().timeIntervalSince1970)
+      var conversation = state.conversation
       conversation.messages.append(newMessage)
-    }
-  }
+      await send(.binding(.set(\.$conversation, conversation)))
 
-  private func receiveMessage(_ message: String) {
-    let newMessage = Message(text: message, participant: .bot(conversation.bot), timestamp: Date().timeIntervalSince1970)
-    withAnimation {
-      conversation.messages.append(newMessage)
-    }
-  }
+      let answer: String
+      do {
+        answer = try await chatClient.generateAnswerForConversation(conversation)
+      } catch {
+        answer = "I'm sorry, I'm having trouble understanding you. Can you rephrase?"
+        log.error(error)
+      }
 
-  private func askDavinci() async {
-    do {
-      let answer = try await chatClient.generateAnswerForConversation(conversation)
-      receiveMessage(answer)
-    } catch {
-      receiveMessage("I'm sorry, I'm having trouble understanding you. Can you rephrase?")
-      log.error(error)
+      let answerMessage = Message(text: answer, participant: .bot(conversation.bot), timestamp: Date().timeIntervalSince1970)
+      conversation.messages.append(answerMessage)
+      await send(.binding(.set(\.$conversation, conversation)))
+
+      await send(.binding(.set(\.$isLoading, false)))
     }
   }
 }
 
 // MARK: - ChatView
 
-struct ChatView: View {
+public struct ChatView: View {
   @ObserveInjection var inject
-
-  @ObservedObject var viewModel = ChatViewModel()
   @Namespace var namespace
 
-  var body: some View {
-    VStack(spacing: .grid(4)) {
-      ReversedScrollView {
-        VStack(spacing: .grid(4)) {
-          ForEach(viewModel.conversation.messages, content: { message in
-            MessageView(message: message)
-              .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
-              .transition(.move(edge: message.participant.isBot ? .leading : .trailing))
-          })
-          if viewModel.isLoading {
-            WithInlineState(initialValue: ".") { text in
-              MessageView(message: .init(text: text.wrappedValue, participant: .bot(viewModel.conversation.bot),
-                                         timestamp: Date().timeIntervalSince1970))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .animateForever(using: .easeInOut(duration: 1)) {
-                  text.wrappedValue = text.wrappedValue == "..." ? "." : "..."
-                }
-            }
-            .transition(.move(edge: .leading))
-          }
-        }
-      }
-      .padding(.horizontal, .grid(6))
+  let store: StoreOf<Chat>
+
+  public init(store: StoreOf<Chat>) {
+    self.store = store
+  }
+
+  public var body: some View {
+    WithViewStore(store, observe: { $0 }) { viewStore in
+      let lastId = (viewStore.conversation.messages.last?.id.uuidString ?? "Empty") + (viewStore.isLoading ? "Loading" : "")
 
       ZStack {
-        if viewModel.isLoading {
-          ActivityIndicator()
-            .foregroundColor(.black)
-            .frame(width: 20, height: 20)
-            .padding(.grid(2))
-            .background {
-              RoundedRectangle(cornerRadius: .grid(2))
-                .fill(Color.white)
-                .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
-            }
-            .matchedGeometryEffect(id: "input", in: namespace)
-        } else {
-          HStack(spacing: .grid(2)) {
-            TextField(
-              "free_form",
-              text: $viewModel.currentInput,
-              prompt: Text("Type your message..."),
-              axis: .vertical
-            )
-            .lineLimit(1...)
-            .textFieldStyle(.plain)
-            // .onSubmit { viewModel.currentInput += "\n" }
-            .onSubmit { viewModel.sendButtonTap() }
-            .foregroundColor(.black)
-            .font(.DS.bodyL)
-            .padding(.vertical, .grid(2))
+        ScrollViewReader { scrollReader in
+          ReversedScrollView {
+            VStack(spacing: .grid(4)) {
+              ForEach(viewStore.conversation.messages, content: { message in
+                MessageView(message: message)
+              })
 
-            Button { viewModel.sendButtonTap() } label: {
-              Image(systemName: "paperplane.fill")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .foregroundColor(.white)
-                .frame(width: 34, height: 34)
-                .background {
-                  RoundedRectangle(cornerRadius: .grid(2))
-                    .fill(Color.systemBlue)
+              if viewStore.isLoading {
+                WithInlineState(initialValue: ".") { text in
+                  MessageView(message: .init(text: text.wrappedValue,
+                                             participant: .bot(viewStore.conversation.bot),
+                                             timestamp: Date().timeIntervalSince1970))
+                    .animateForever(using: .easeInOut(duration: 1), autoreverses: true) {
+                      text.wrappedValue = text.wrappedValue == "..." ? "." : "..."
+                    }
                 }
+              }
             }
-            .buttonStyle(.borderless)
-            .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
+            .padding(.bottom, .grid(4))
+            .padding(.bottom, 50) // input field height
+            .padding(.bottom, .grid(6)) // input field bottom padding
+            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
+            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.conversation.messages)
+
+            AnyView(Text(lastId).frame(width: 0, height: 0)).id(lastId)
           }
-          .padding(.horizontal, .grid(2))
-          .frame(minHeight: 50)
-          .background {
-            RoundedRectangle(cornerRadius: .grid(2))
-              .fill(Color.white)
-              .shadow(color: .black.opacity(0.3), radius: 15, y: 10)
+          .padding(.horizontal, .grid(6))
+          .onChange(of: lastId) { lastId in
+            withAnimation {
+              scrollReader.scrollTo(lastId)
+            }
           }
-          .matchedGeometryEffect(id: "input", in: namespace)
+          .onAppear {
+            withAnimation {
+              scrollReader.scrollTo(lastId)
+            }
+          }
         }
+
+        ZStack {
+          if viewStore.isLoading {
+            ActivityIndicator()
+              .foregroundColor(.black)
+              .frame(width: 20, height: 20)
+              .frame(width: 50, height: 50)
+              .background {
+                RoundedRectangle(cornerRadius: .grid(2))
+                  .fill(Color.white)
+                  .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
+              }
+              .matchedGeometryEffect(id: "input", in: namespace)
+          } else {
+            ChatInputFieldView(store: store.scope(state: \.chatInputField, action: Chat.Action.chatInputField))
+              .matchedGeometryEffect(id: "input", in: namespace)
+          }
+        }
+        .padding([.horizontal, .bottom], .grid(6))
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
       }
-      .padding([.horizontal, .bottom], .grid(6))
-      .frame(maxWidth: .infinity)
-    }
-    .background {
-      RoundedRectangle(cornerRadius: .grid(2))
-        .fill(Color.white)
+      .background {
+        RoundedRectangle(cornerRadius: .grid(2))
+          .fill(Color.white)
+      }
     }
     .enableInjection()
   }
 }
 
-// MARK: - ReversedScrollView
-
-public struct ReversedScrollView<Content: View>: View {
-  var content: Content
-
-  public init(@ViewBuilder builder: () -> Content) {
-    content = builder()
-  }
-
-  public var body: some View {
-    GeometryReader { proxy in
-      ScrollView(showsIndicators: false) {
-        VStack {
-          Spacer()
-          content
-        }
-        .frame(minWidth: proxy.size.width, minHeight: proxy.size.height)
+#if DEBUG
+  struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+      NavigationView {
+        ChatView(
+          store: Store(
+            initialState: Chat.State(),
+            reducer: Chat()
+          )
+        )
       }
     }
   }
-}
+#endif

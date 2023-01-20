@@ -1,6 +1,6 @@
 import AppKit
-import SwiftUI
 import ComposableArchitecture
+import SwiftUI
 
 @main
 struct CompanionAIApp: App {
@@ -8,13 +8,13 @@ struct CompanionAIApp: App {
     WindowGroup {
       AppFeatureView(
         store: Store(
-          initialState: AppFeature.State(),
+          initialState: UserDefaults.standard.appState ?? AppFeature.State(),
           reducer: AppFeature()
         )
       )
-        .task {
-          NSApplication.shared.windows.first?.level = .floating
-        }
+      .task {
+        NSApplication.shared.windows.first?.level = .floating
+      }
     }
     .defaultSize(width: 800, height: 600)
     .windowStyle(HiddenTitleBarWindowStyle())
