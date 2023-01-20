@@ -2,43 +2,47 @@ import AppDevUtils
 import Inject
 import SwiftUI
 
+// MARK: - MessageView
+
 struct MessageView: View {
   @ObserveInjection var inject
 
   var message: Message
 
   var body: some View {
-    VStack(spacing: .grid(2)) {
+    VStack(alignment: message.participant.isBot ? .leading : .trailing, spacing: .grid(2)) {
       HStack(spacing: .grid(2)) {
         if message.participant.isUser {
           Text(message.dateString)
-            .font(.caption)
-            .foregroundColor(.gray)
+            .foregroundColor(.systemGray)
         }
 
         Text(message.participant.name)
-          .font(.caption)
           .foregroundColor(.black)
 
         if message.participant.isBot {
           Text(message.dateString)
-            .font(.caption)
-            .foregroundColor(.gray)
+            .foregroundColor(.systemGray)
         }
       }
-      .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
+        .font(.caption)
 
       Text(message.text)
         .font(.body)
         .foregroundColor(.black)
         .padding(.grid(2))
         .background(
-          RoundedRectangle(cornerRadius: .grid(2))
-            .fill(message.participant.isBot
-              ? Color(.systemGray).lighten(by: 0.1)
-              : Color(.systemPurple).lighten(by: 0.2))
+          Rectangle()
+            .fill(
+              message.participant.isBot
+                ? Color(.systemGray).lighten(by: 0.3)
+                : Color(.systemPurple).lighten(by: 0.3)
+            )
+            .roundedCorners(
+              radius: .grid(2),
+              corners: message.participant.isBot ? [.topRight, .bottomLeft, .bottomRight] : [.topLeft, .bottomLeft, .bottomRight]
+            )
         )
-        .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
     }
     .multilineTextAlignment(.leading)
     .enableInjection()

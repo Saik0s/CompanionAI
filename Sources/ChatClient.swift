@@ -43,7 +43,7 @@ extension ChatClient: DependencyKey {
         let result = try await openAI.completions(query: query)
 
         if let text = result.choices.first?.text {
-          return text
+          return text.trimmingCharacters(in: .whitespacesAndNewlines)
         } else {
           throw ChatClientError.noChoices
         }

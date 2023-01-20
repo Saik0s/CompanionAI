@@ -9,7 +9,7 @@ struct ContentView: View {
 
   var body: some View {
     ChatView()
-      .padding()
+      .padding(.grid(1))
       .enableInjection()
   }
 }

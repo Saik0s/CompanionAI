@@ -15,11 +15,13 @@ class ChatViewModel: ObservableObject {
   func sendButtonTap() {
     guard !currentInput.isEmpty, !isLoading else { return }
     let oldInput = currentInput
+    currentInput = ""
     withAnimation {
-      currentInput = ""
       isLoading = true
-      Task {
-        await send(oldInput)
+    }
+    Task {
+      await send(oldInput)
+      withAnimation {
         isLoading = false
       }
     }
@@ -32,12 +34,16 @@ class ChatViewModel: ObservableObject {
 
   private func sendMessage(_ message: String) {
     let newMessage = Message(text: message, participant: .user(conversation.user), timestamp: Date().timeIntervalSince1970)
-    conversation.messages.append(newMessage)
+    withAnimation {
+      conversation.messages.append(newMessage)
+    }
   }
 
   private func receiveMessage(_ message: String) {
     let newMessage = Message(text: message, participant: .bot(conversation.bot), timestamp: Date().timeIntervalSince1970)
-    conversation.messages.append(newMessage)
+    withAnimation {
+      conversation.messages.append(newMessage)
+    }
   }
 
   private func askDavinci() async {
@@ -61,66 +67,109 @@ struct ChatView: View {
 
   var body: some View {
     VStack(spacing: .grid(4)) {
-      ScrollView {
+      ReversedScrollView {
         VStack(spacing: .grid(4)) {
-          ForEach(viewModel.conversation.messages.reversed(), content: { message in
+          ForEach(viewModel.conversation.messages, content: { message in
             MessageView(message: message)
               .frame(maxWidth: .infinity, alignment: message.participant.isBot ? .leading : .trailing)
+              .transition(.move(edge: message.participant.isBot ? .leading : .trailing))
           })
           if viewModel.isLoading {
-            MessageView(message: .init(text: "...", participant: .bot(viewModel.conversation.bot), timestamp: Date().timeIntervalSince1970))
+            WithInlineState(initialValue: ".") { text in
+              MessageView(message: .init(text: text.wrappedValue, participant: .bot(viewModel.conversation.bot),
+                                         timestamp: Date().timeIntervalSince1970))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .animateForever(using: .easeInOut(duration: 1)) {
+                  text.wrappedValue = text.wrappedValue == "..." ? "." : "..."
+                }
+            }
+              .transition(.move(edge: .leading))
           }
         }
-        .frame(maxHeight: .infinity, alignment: .bottom)
       }
+        .padding(.horizontal, .grid(6))
 
-      if viewModel.isLoading {
-        ActivityIndicator()
-          .foregroundColor(.black)
-          .frame(width: 20, height: 20)
-          .padding(.grid(2))
-          .background {
-            RoundedRectangle(cornerRadius: .grid(2))
-              .fill(Color.white)
-              .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
+      ZStack {
+        if viewModel.isLoading {
+          ActivityIndicator()
+            .foregroundColor(.black)
+            .frame(width: 20, height: 20)
+            .padding(.grid(2))
+            .background {
+              RoundedRectangle(cornerRadius: .grid(2))
+                .fill(Color.white)
+                .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
+            }
+            .matchedGeometryEffect(id: "input", in: namespace)
+        } else {
+          HStack(spacing: .grid(2)) {
+            TextField(
+              "free_form",
+              text: $viewModel.currentInput,
+              prompt: Text("Type your message..."),
+              axis: .vertical
+            )
+              .lineLimit(1...)
+              .textFieldStyle(.plain)
+              // .onSubmit { viewModel.currentInput += "\n" }
+              .onSubmit { viewModel.sendButtonTap() }
+              .foregroundColor(.black)
+              .font(.DS.bodyL)
+              .padding(.vertical, .grid(2))
+
+            Button { viewModel.sendButtonTap() } label: {
+              Image(systemName: "paperplane.fill")
+                .resizable()
+                .frame(width: 20, height: 20)
+                .foregroundColor(.white)
+                .frame(width: 34, height: 34)
+                .background {
+                  RoundedRectangle(cornerRadius: .grid(2))
+                    .fill(Color.systemBlue)
+                }
+            }
+              .buttonStyle(.borderless)
+              .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
           }
-          .matchedGeometryEffect(id: "input", in: namespace)
-      } else {
-        HStack(spacing: .grid(2)) {
-          TextField("Message", text: $viewModel.currentInput.removeDuplicates(), onCommit: {
-            viewModel.sendButtonTap()
-          })
-          .textFieldStyle(.plain)
-          .foregroundColor(.black)
-          Button { viewModel.sendButtonTap() } label: {
-            Image(systemName: "paperplane.fill")
-              .font(.title)
-              .foregroundColor(.white)
-              .padding(.grid(1))
-              .background {
-                RoundedRectangle(cornerRadius: .grid(2))
-                  .fill(Color.systemBlue)
-                  .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
-              }
-          }
-          .buttonStyle(.plain)
+            .padding(.horizontal, .grid(2))
+            .frame(minHeight: 50)
+            .background {
+              RoundedRectangle(cornerRadius: .grid(2))
+                .fill(Color.white)
+                .shadow(color: .black.opacity(0.3), radius: 15, y: 10)
+            }
+            .matchedGeometryEffect(id: "input", in: namespace)
         }
-        .padding(.vertical, .grid(2))
-        .padding(.horizontal, .grid(2))
-        .background {
-          RoundedRectangle(cornerRadius: .grid(2))
-            .fill(Color.white)
-            .shadow(color: .black.opacity(0.3), radius: 15, y: 5)
-        }
-        .matchedGeometryEffect(id: "input", in: namespace)
       }
+        .padding([.horizontal, .bottom], .grid(6))
+        .frame(maxWidth: .infinity)
     }
-    .padding(.grid(6))
     .background {
       RoundedRectangle(cornerRadius: .grid(2))
         .fill(Color.white)
     }
-    .padding(.grid(2))
     .enableInjection()
+  }
+}
+
+// MARK: - ReversedScrollView
+
+public struct ReversedScrollView<Content: View>: View {
+  var content: Content
+
+  public init(@ViewBuilder builder: () -> Content) {
+    content = builder()
+  }
+
+  public var body: some View {
+    GeometryReader { proxy in
+      ScrollView(showsIndicators: false) {
+        VStack {
+          Spacer()
+          content
+        }
+        .frame(minWidth: proxy.size.width, minHeight: proxy.size.height)
+      }
+    }
   }
 }
