@@ -1,11 +1,17 @@
 import AppKit
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct CompanionAIApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      AppFeatureView(
+        store: Store(
+          initialState: AppFeature.State(),
+          reducer: AppFeature()
+        )
+      )
         .task {
           NSApplication.shared.windows.first?.level = .floating
         }
