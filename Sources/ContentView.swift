@@ -1,4 +1,5 @@
 import AppDevUtils
+import Inject
 import SwiftUI
 
 // MARK: - Bot
@@ -141,7 +142,7 @@ final class ContentViewModel: ObservableObject {
     log(data.utf8String)
 
     do {
-      let textCompletion = try! JSONDecoder().decode(TextCompletion.self, from: data)
+      let textCompletion = try JSONDecoder().decode(TextCompletion.self, from: data)
       if let generatedText = textCompletion.choices.first?.text {
         receiveMessage(generatedText)
       } else {
@@ -194,6 +195,7 @@ struct MessageView: View {
 
 struct ContentView: View {
   @ObservedObject var viewModel = ContentViewModel()
+  @ObserveInjection var inject
 
   var body: some View {
     HStack(spacing: 0) {
@@ -211,7 +213,7 @@ struct ContentView: View {
         }
 
         HStack {
-          TextField("Message", text: $viewModel.currentInput)
+          TextField("Message2", text: $viewModel.currentInput)
           Button("Send") {
             Task {
               await viewModel.sendButtonTap()
@@ -221,6 +223,7 @@ struct ContentView: View {
       }
     }
     .padding()
+    .enableInjection()
   }
 }
 

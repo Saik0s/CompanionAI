@@ -16,13 +16,27 @@ func target(name: String) -> Target {
     ],
     dependencies: [
       .external(name: "AppDevUtils"),
+      .external(name: "Inject"),
     ],
-    settings: .settings(base: ["CODE_SIGN_IDENTITY": "", "CODE_SIGNING_REQUIRED": "NO"]),
     environment: ["OPENAI_API_KEY": OPENAI_API_KEY]
   )
 }
 
 let project = Project(
-  name: "App",
-  targets: [target(name: "App")]
+  name: "CompanionAI",
+  options: .options(
+    disableBundleAccessors: true,
+    disableSynthesizedResourceAccessors: true,
+    textSettings: .textSettings(
+      indentWidth: 2,
+      tabWidth: 2
+    )
+  ),
+  settings: .settings(
+    configurations: [
+      .debug(name: "Debug", xcconfig: "//configs/Base.xcconfig"),
+      .release(name: "Release", xcconfig: "//configs/Base.xcconfig"),
+    ]
+  ),
+  targets: [target(name: "CompanionAI")]
 )

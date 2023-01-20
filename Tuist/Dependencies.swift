@@ -1,7 +1,8 @@
 import ProjectDescription
 
 let packages: [Package] = [
-  .package(url: "https://github.com/Saik0s/AppDevUtils.git", from: "0.0.1"),
+  .package(url: "https://github.com/Saik0s/AppDevUtils.git", .branch("main")),
+  .package(url: "https://github.com/krzysztofzablocki/Inject.git", .branch("main")),
 ]
 
 let dependencies = Dependencies(

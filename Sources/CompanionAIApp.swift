@@ -6,5 +6,6 @@ struct CompanionAIApp: App {
     WindowGroup {
       ContentView()
     }
+    .windowStyle(HiddenTitleBarWindowStyle())
   }
 }
