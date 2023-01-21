@@ -18,9 +18,11 @@ class ChatViewModel: ObservableObject {
 
 public struct Chat: ReducerProtocol {
   public struct State: Equatable, Codable {
+    @BindableState var alert: AlertState<Action>?
     @BindableState var conversation: Conversation = .init()
     @BindableState var isLoading: Bool = false
     @BindableState var chatInputField = ChatInputField.State()
+    var embeddingCalculationInProgress: Set<UUID> = []
 
     enum CodingKeys: String, CodingKey {
       case conversation
@@ -30,6 +32,9 @@ public struct Chat: ReducerProtocol {
   public enum Action: BindableAction, Equatable {
     case binding(BindingAction<State>)
     case chatInputField(ChatInputField.Action)
+    case addMessage(Participant, TaskResult<String>)
+    case addEmbedding(Message.ID, TaskResult<[Double]>)
+    case askForAnswer
   }
 
   @Dependency(\.chatClient) var chatClient: ChatClient
@@ -49,6 +54,56 @@ public struct Chat: ReducerProtocol {
 
       case .chatInputField:
         return .none
+
+      case let .addMessage(participant, .success(text)):
+        let message = Message(text: text, participant: participant, timestamp: Date().timeIntervalSince1970)
+        state.conversation.messages.append(message)
+
+        var messagesToCalculateEmbeddingsFor: [Message] = []
+        for message in state.conversation.messages where message.isEmbeddingCalculated == false {
+          if state.embeddingCalculationInProgress.insert(message.id).inserted {
+            messagesToCalculateEmbeddingsFor.append(message)
+          }
+        }
+
+        return .run { [messagesToCalculateEmbeddingsFor] send in
+          for message in messagesToCalculateEmbeddingsFor {
+            await send(.addEmbedding(message.id, TaskResult { try await chatClient.calculateEmbeddingForMessage(message) }))
+          }
+        }
+
+      case let .addEmbedding(id, .success(embedding)):
+        state.conversation.messages = state.conversation.messages.map { message in
+          message.id == id
+            ? message
+              .with(\.embedding, setTo: embedding)
+              .with(\.isEmbeddingCalculated, setTo: true)
+            : message
+        }
+
+        if let message = state.conversation.messages.first(where: { $0.id == id }) {
+          state.conversation.messages.forEach {
+            log.debug("\nMessage \(message.text)\nMessage: \($0.text)\nsimilarity: \(chatClient.cosineSimilarity($0.embedding, message.embedding))")
+          }
+        }
+
+        return .none
+
+      case .askForAnswer:
+        return .run { [conversation = state.conversation] send in
+          await send(.binding(.set(\.$isLoading, true)))
+          await send(.addMessage(.bot(conversation.bot), TaskResult { try await chatClient.generateAnswerForConversation(conversation) }))
+          await send(.binding(.set(\.$isLoading, false)))
+        }
+
+      case let .addEmbedding(id, .failure(error)):
+        state.embeddingCalculationInProgress.remove(id)
+        state.alert = AlertState(title: TextState("Error"), message: TextState(error.localizedDescription))
+        return .none
+
+      case let .addMessage(_, .failure(error)):
+        state.alert = AlertState(title: TextState("Error"), message: TextState(error.localizedDescription))
+        return .none
       }
     }
   }
@@ -60,26 +115,8 @@ public struct Chat: ReducerProtocol {
     state.chatInputField.text = ""
 
     return .run { [state] send in
-      await send(.binding(.set(\.$isLoading, true)))
-
-      let newMessage = Message(text: oldInput, participant: .user(state.conversation.user), timestamp: Date().timeIntervalSince1970)
-      var conversation = state.conversation
-      conversation.messages.append(newMessage)
-      await send(.binding(.set(\.$conversation, conversation)))
-
-      let answer: String
-      do {
-        answer = try await chatClient.generateAnswerForConversation(conversation)
-      } catch {
-        answer = "I'm sorry, I'm having trouble understanding you. Can you rephrase?"
-        log.error(error)
-      }
-
-      let answerMessage = Message(text: answer, participant: .bot(conversation.bot), timestamp: Date().timeIntervalSince1970)
-      conversation.messages.append(answerMessage)
-      await send(.binding(.set(\.$conversation, conversation)))
-
-      await send(.binding(.set(\.$isLoading, false)))
+      await send(.addMessage(.user(state.conversation.user), TaskResult { oldInput }))
+      await send(.askForAnswer)
     }
   }
 }
@@ -166,6 +203,9 @@ public struct ChatView: View {
           .fill(Color.white)
       }
     }
+
+    .alert(store.scope(state: \.alert),
+           dismiss: .binding(.set(\.$alert, nil)))
     .enableInjection()
   }
 }

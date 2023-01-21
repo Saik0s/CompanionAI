@@ -1,11 +1,14 @@
 import Dependencies
 import Foundation
 import OpenAI
+import AppDevUtils
 
 // MARK: - ChatClient
 
 public struct ChatClient {
   public var generateAnswerForConversation: (Conversation) async throws -> String
+  public var calculateEmbeddingForMessage: (Message) async throws -> [Double]
+  public var cosineSimilarity: ([Double], [Double]) -> Double
 }
 
 // MARK: - ChatClientError
@@ -53,7 +56,13 @@ extension ChatClient: DependencyKey {
         } else {
           throw ChatClientError.noChoices
         }
-      }
+      },
+      calculateEmbeddingForMessage: { message in
+        let query = OpenAI.EmbeddingsQuery(model: .textEmbeddingAda, input: message.text)
+        let result = try await openAI.embeddings(query: query)
+        return result.data.first?.embedding ?? []
+      },
+      cosineSimilarity: Vector.cosineSimilarity(a:b:)
     )
   }()
 }
@@ -69,6 +78,32 @@ private extension OpenAI {
   func completions(query: CompletionsQuery) async throws -> CompletionsResult {
     try await withCheckedThrowingContinuation { continuation in
       completions(query: query) { result in
+        switch result {
+        case let .success(result):
+          continuation.resume(returning: result)
+        case let .failure(error):
+          continuation.resume(throwing: error)
+        }
+      }
+    }
+  }
+
+  func embeddings(query: EmbeddingsQuery) async throws -> EmbeddingsResult {
+    try await withCheckedThrowingContinuation { continuation in
+      embeddings(query: query) { result in
+        switch result {
+        case let .success(result):
+          continuation.resume(returning: result)
+        case let .failure(error):
+          continuation.resume(throwing: error)
+        }
+      }
+    }
+  }
+
+  func images(query: ImagesQuery) async throws -> ImagesResult {
+    try await withCheckedThrowingContinuation { continuation in
+      images(query: query) { result in
         switch result {
         case let .success(result):
           continuation.resume(returning: result)
