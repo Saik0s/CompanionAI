@@ -18,6 +18,9 @@
     <img src="https://github.com/Saik0s/CompanionAI/actions/workflows/swift.yml/badge.svg" />
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
     <img src="https://img.shields.io/badge/Platforms-macOS-3876D3.svg" />
+    <a href="https://tuist.io">
+        <img src="https://img.shields.io/badge/Powered%20by-Tuist-blue" alt="Tuist badge" />
+    </a>
     <a href="https://twitter.com/sa1k0s">
         <img src="https://img.shields.io/badge/Contact-@sa1k0s-purple.svg?style=flat" alt="Twitter: @sa1k0s" />
     </a>

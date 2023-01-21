@@ -24,8 +24,8 @@ jobs:
         bash <(curl -Ls https://install.tuist.io)
     - name: Dependencies
       run: |
+        cp Tuist/ProjectDescriptionHelpers/Private.swift.example Tuist/ProjectDescriptionHelpers/Private.swift
         tuist fetch
     - name: Build
       run: |
-        cp Tuist/ProjectDescriptionHelpers/Private.swift.example Tuist/ProjectDescriptionHelpers/Private.swift
         tuist build --generate --configuration Release --build-output-path .build/
