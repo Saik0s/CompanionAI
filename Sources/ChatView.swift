@@ -203,7 +203,6 @@ public struct ChatView: View {
           .fill(Color.white)
       }
     }
-
     .alert(store.scope(state: \.alert),
            dismiss: .binding(.set(\.$alert, nil)))
     .enableInjection()

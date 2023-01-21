@@ -15,10 +15,12 @@ extension UserDefaults {
 public struct AppFeature: ReducerProtocol {
   public struct State: Equatable, Codable {
     var chat = Chat.State()
+    var menuBar = MenuBar.State()
   }
 
   public enum Action: Equatable {
     case chat(Chat.Action)
+    case menuBar(MenuBar.Action)
     case task
   }
 
@@ -26,9 +28,14 @@ public struct AppFeature: ReducerProtocol {
     CombineReducers {
       Scope(state: \.chat, action: /Action.chat) { Chat() }
 
+      Scope(state: \.menuBar, action: /Action.menuBar) { MenuBar() }
+
       Reduce { _, action in
         switch action {
         case .chat:
+          return .none
+
+        case .menuBar:
           return .none
 
         case .task:
@@ -56,10 +63,13 @@ public struct AppFeatureView: View {
 
   public var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
-      ChatView(store: store.scope(state: { $0.chat }, action: { .chat($0) }))
-        .task {
-          viewStore.send(.task)
-        }
+      HStack(spacing: .grid(1)) {
+        MenuBarView(store: store.scope(state: \.menuBar, action: { .menuBar($0) }))
+        ChatView(store: store.scope(state: \.chat, action: { .chat($0) }))
+      }
+      .task {
+        viewStore.send(.task)
+      }
     }
     .padding(.grid(1))
     .enableInjection()

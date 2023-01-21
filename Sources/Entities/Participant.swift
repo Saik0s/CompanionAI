@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Participant
+
 public enum Participant: Hashable, Codable {
   case bot(Bot)
   case user(User)

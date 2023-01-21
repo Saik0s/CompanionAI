@@ -1,7 +1,7 @@
+import AppDevUtils
 import Dependencies
 import Foundation
 import OpenAI
-import AppDevUtils
 
 // MARK: - ChatClient
 

@@ -1,5 +1,7 @@
-import Foundation
 import AppDevUtils
+import Foundation
+
+// MARK: - Message
 
 public struct Message: Hashable, Codable, Identifiable, Then {
   public var id: UUID = .init()

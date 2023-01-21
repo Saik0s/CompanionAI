@@ -5,4 +5,5 @@ public struct Bot: Hashable, Codable, Identifiable {
   let name: String
   var who: String = ""
   var greeting: String = ""
+  var avatarURL: String = ""
 }
