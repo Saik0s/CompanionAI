@@ -37,8 +37,6 @@ func target(name: String) -> Target {
 let project = Project(
   name: "CompanionAI",
   options: .options(
-    disableBundleAccessors: true,
-    disableSynthesizedResourceAccessors: true,
     textSettings: .textSettings(
       indentWidth: 2,
       tabWidth: 2
@@ -48,5 +46,8 @@ let project = Project(
     .debug(name: "Debug", settings: projectSettings, xcconfig: nil),
     .release(name: "Release", settings: projectSettings, xcconfig: nil),
   ]),
-  targets: [target(name: "CompanionAI")]
+  targets: [target(name: "CompanionAI")],
+  resourceSynthesizers: [
+    .files(extensions: ["txt", "yml"]),
+  ]
 )
