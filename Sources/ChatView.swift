@@ -145,27 +145,23 @@ public struct ChatView: View {
                 }
               }
             }
-              .padding(.bottom, .grid(4))
-              .padding(.bottom, 50) // input field height
-              .padding(.bottom, .grid(6)) // input field bottom padding
-              .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
-              .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.conversation.messages)
+            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
+            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.conversation.messages)
+            .padding(.bottom, .grid(4))
+            .padding(.bottom, 50) // input field height
+            .padding(.bottom, .grid(6)) // input field bottom padding
 
             AnyView(Text(lastId).frame(width: 0, height: 0)).id(lastId)
           }
-            .padding(.horizontal, .grid(6))
-            .onChange(of: lastId) { lastId in
-              withAnimation(.easeInOut(duration: 0.3).delay(0.3)) {
-                scrollReader.scrollTo(lastId)
-              }
-            }
-            .onAppear {
-              withAnimation {
-                scrollReader.scrollTo(lastId)
-              }
-            }
+          .padding(.horizontal, .grid(6))
+          .onChange(of: lastId) { lastId in
+            scrollReader.scrollTo(lastId)
+          }
+          .onAppear {
+            scrollReader.scrollTo(lastId)
+          }
         }
-          .textSelection(.enabled)
+        .textSelection(.enabled)
 
         ZStack {
           if viewStore.isLoading {

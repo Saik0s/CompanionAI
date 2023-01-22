@@ -1,6 +1,5 @@
 import Foundation
 import ProjectDescription
-import ProjectDescriptionHelpers
 
 let projectSettings: SettingsDictionary = [
   "GCC_TREAT_WARNINGS_AS_ERRORS": "YES",
@@ -11,24 +10,22 @@ let projectSettings: SettingsDictionary = [
   "CODE_SIGNING_REQUIRED": "NO",
 ]
 
-func target(name: String) -> Target {
+func target(name: String, withHotReload: Bool) -> Target {
   Target(
     name: name,
     platform: .macOS,
     product: .app,
     bundleId: "me.igortarasenko.\(name)",
     deploymentTarget: .macOS(targetVersion: "13.0"),
-    infoPlist: .extendingDefault(with: []),
+    infoPlist: .extendingDefault(with: [:]),
     sources: .paths([.relativeToManifest("Sources/**")]),
     resources: [
       "Resources/**",
     ],
     dependencies: [
       .external(name: "AppDevUtils"),
-      .external(name: "Inject"),
       .external(name: "OpenAI"),
-    ],
-    environment: ["OPENAI_API_KEY": OPENAI_API_KEY]
+    ] + (withHotReload ? [.external(name: "Inject")] : [])
   )
 }
 
@@ -44,8 +41,11 @@ let project = Project(
     .debug(name: "Debug", settings: projectSettings, xcconfig: nil),
     .release(name: "Release", settings: projectSettings, xcconfig: nil),
   ]),
-  targets: [target(name: "CompanionAI")],
+  targets: [
+    target(name: "CompanionAI", withHotReload: false),
+    target(name: "CompanionAI-hot", withHotReload: true),
+  ],
   resourceSynthesizers: [
-    .files(extensions: ["txt", "yml"]),
+    .files(extensions: ["txt"]),
   ]
 )

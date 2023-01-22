@@ -13,9 +13,9 @@ struct CompanionAIApp: App {
         )
       )
       .preferredColorScheme(.light)
-      .task {
-        NSApplication.shared.windows.first?.level = .floating
-      }
+      // .task {
+      //   NSApplication.shared.windows.first?.level = .floating
+      // }
     }
     .defaultSize(width: 800, height: 600)
     .windowStyle(HiddenTitleBarWindowStyle())

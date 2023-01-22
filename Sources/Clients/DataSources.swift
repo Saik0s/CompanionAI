@@ -1,6 +1,7 @@
 import AppDevUtils
 import Foundation
 import OpenAI
+import Dependencies
 
 // MARK: - DataSourcesError
 
@@ -11,7 +12,11 @@ public enum DataSourcesError: Error {
 // MARK: - DataSources
 
 public enum DataSources {
-  static var openAI = OpenAI(apiToken: ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!)
+  static var openAI: OpenAI = {
+    @Dependency(\.configClient) var configClient
+    var config = try! configClient.getConfig()
+    return OpenAI(apiToken: config.openAIKey)
+  }()
 
   static func generateCompletion(for prompt: String, temperature: Double = 0.7, max_tokens: Int = 700) async throws -> String {
     let query = OpenAI.CompletionsQuery(

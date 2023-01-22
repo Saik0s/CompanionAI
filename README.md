@@ -35,16 +35,13 @@ CompanionAI is a chat application that allows users to communicate with a team o
 
 ## Installation
 
-Create `Tuist/ProjectDescriptionHelpers/Private.swift` using `Tuist/ProjectDescriptionHelpers/Private.swift.example` and add your `OPENAI_API_KEY` there.
-
 Run `make build_release` and CompanionAI.app will be ready for use in the repository root folder.
 
-## Usage
+After launch it will create a config file at path `~/Library/Application Support/CompanionAI/config.json`. You should set OpenAI API key in this file.
 
 ## 🗺 Roadmap
 
 - Generate context from chat history that will be sent with every prompt
-- Ability to create different personas
 
 ## 💻 Developing
 

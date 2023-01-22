@@ -1,6 +1,8 @@
 import Foundation
 
 public struct Config: Hashable, Codable {
+  public var openAIKey: String = ProcessInfo.processInfo.environment["OPENAI_API_KEY"] ?? ""
+
   public var conversationStartingPrompt: String =
     "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n"
   public var userStartingMessage: String = "Hello, how can you help me?"
