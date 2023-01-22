@@ -10,7 +10,7 @@ let projectSettings: SettingsDictionary = [
   "CODE_SIGNING_REQUIRED": "NO",
 ]
 
-func target(name: String, withHotReload: Bool) -> Target {
+func target(name: String) -> Target {
   Target(
     name: name,
     platform: .macOS,
@@ -24,8 +24,9 @@ func target(name: String, withHotReload: Bool) -> Target {
     ],
     dependencies: [
       .external(name: "AppDevUtils"),
+      .external(name: "Inject"),
       .external(name: "OpenAI"),
-    ] + (withHotReload ? [.external(name: "Inject")] : [])
+    ]
   )
 }
 
@@ -42,8 +43,7 @@ let project = Project(
     .release(name: "Release", settings: projectSettings, xcconfig: nil),
   ]),
   targets: [
-    target(name: "CompanionAI", withHotReload: false),
-    target(name: "CompanionAI-hot", withHotReload: true),
+    target(name: "CompanionAI"),
   ],
   resourceSynthesizers: [
     .files(extensions: ["txt"]),
