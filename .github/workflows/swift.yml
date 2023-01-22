@@ -27,4 +27,12 @@ jobs:
         tuist fetch
     - name: Build
       run: |
-        tuist build --generate --configuration Release --build-output-path .build/
+        make build_release
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        generate_release_notes: true
+        append_body: true
+        files: |
+          CompanionAI.app
