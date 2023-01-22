@@ -73,7 +73,7 @@ public struct AppFeature: ReducerProtocol {
         }
       }
     }
-    .onChange(of: \.chat) { chat, state, _ in
+    .onChange(of: \.chat) { chat, _, _ in
       guard let chat else { return .none }
       return .fireAndForget {
         try await chatClient.saveConversation(chat.conversation)

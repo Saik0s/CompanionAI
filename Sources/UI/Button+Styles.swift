@@ -1,5 +1,7 @@
 import SwiftUI
 
+// MARK: - ActionButtonStyle
+
 public struct ActionButtonStyle: ButtonStyle {
   public func makeBody(configuration: Configuration) -> some View {
     configuration.label

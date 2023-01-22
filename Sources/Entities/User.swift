@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - User
+
 public struct User: Hashable, Codable {
   public var name: String
 
@@ -9,7 +11,7 @@ public struct User: Hashable, Codable {
 }
 
 #if DEBUG
-public extension User {
-  static let fixture = User(name: "MockUser")
-}
+  public extension User {
+    static let fixture = User(name: "MockUser")
+  }
 #endif

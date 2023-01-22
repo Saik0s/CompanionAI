@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Bot
+
 public struct Bot: Hashable, Codable, Identifiable {
   public var id: UUID = .init()
   let name: String
@@ -9,12 +11,12 @@ public struct Bot: Hashable, Codable, Identifiable {
 }
 
 #if DEBUG
-public extension Bot {
-  static let fixture = Bot(
-    name: "MockBot",
-    who: "MockBot",
-    greeting: "Hello, I'm a bot.",
-    avatarURL: ""
-  )
-}
+  public extension Bot {
+    static let fixture = Bot(
+      name: "MockBot",
+      who: "MockBot",
+      greeting: "Hello, I'm a bot.",
+      avatarURL: ""
+    )
+  }
 #endif
