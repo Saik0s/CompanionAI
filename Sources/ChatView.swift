@@ -3,23 +3,11 @@ import ComposableArchitecture
 import Inject
 import SwiftUI
 
-// MARK: - ChatViewModel
-
-@MainActor
-class ChatViewModel: ObservableObject {
-  @Published var conversation: Conversation = .init()
-  @Published var currentInput: String = ""
-  @Published var isLoading: Bool = false
-
-  var chatClient: ChatClient { ChatClient.liveValue }
-}
-
 // MARK: - Chat
 
 public struct Chat: ReducerProtocol {
   public struct State: Equatable, Codable {
-    @BindableState var alert: AlertState<Action>?
-    @BindableState var conversation: Conversation = .init()
+    @BindableState var conversation: Conversation
     @BindableState var isLoading: Bool = false
     @BindableState var chatInputField = ChatInputField.State()
     var embeddingCalculationInProgress: Set<UUID> = []
@@ -81,11 +69,14 @@ public struct Chat: ReducerProtocol {
             : message
         }
 
-        if let message = state.conversation.messages.first(where: { $0.id == id }) {
-          state.conversation.messages.forEach {
-            log.debug("\nMessage \(message.text)\nMessage: \($0.text)\nsimilarity: \(chatClient.cosineSimilarity($0.embedding, message.embedding))")
-          }
-        }
+        // if let message = state.conversation.messages.first(where: { $0.id == id }) {
+        //   state.conversation.messages
+        //     .filter(\.isEmbeddingCalculated)
+        //     .forEach {
+        //       log.debug("\nMessage \(message.text)\nMessage: \($0.text)\nsimilarity: \(chatClient.cosineSimilarity($0.embedding,
+        //       message.embedding))")
+        //     }
+        // }
 
         return .none
 
@@ -96,13 +87,11 @@ public struct Chat: ReducerProtocol {
           await send(.binding(.set(\.$isLoading, false)))
         }
 
-      case let .addEmbedding(id, .failure(error)):
+      case let .addEmbedding(id, .failure):
         state.embeddingCalculationInProgress.remove(id)
-        state.alert = AlertState(title: TextState("Error"), message: TextState(error.localizedDescription))
         return .none
 
-      case let .addMessage(_, .failure(error)):
-        state.alert = AlertState(title: TextState("Error"), message: TextState(error.localizedDescription))
+      case .addMessage:
         return .none
       }
     }
@@ -140,42 +129,43 @@ public struct ChatView: View {
       ZStack {
         ScrollViewReader { scrollReader in
           ReversedScrollView {
-            VStack(spacing: .grid(4)) {
+            LazyVStack(spacing: .grid(4)) {
               ForEach(viewStore.conversation.messages, content: { message in
                 MessageView(message: message)
               })
 
               if viewStore.isLoading {
                 WithInlineState(initialValue: ".") { text in
-                  MessageView(message: .init(text: text.wrappedValue,
-                                             participant: .bot(viewStore.conversation.bot),
-                                             timestamp: Date().timeIntervalSince1970))
+                  MessageView(message: Message(text: text.wrappedValue,
+                                               participant: .bot(viewStore.conversation.bot),
+                                               timestamp: Date().timeIntervalSince1970))
                     .animateForever(using: .easeInOut(duration: 1), autoreverses: true) {
                       text.wrappedValue = text.wrappedValue == "..." ? "." : "..."
                     }
                 }
               }
             }
-            .padding(.bottom, .grid(4))
-            .padding(.bottom, 50) // input field height
-            .padding(.bottom, .grid(6)) // input field bottom padding
-            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
-            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.conversation.messages)
+              .padding(.bottom, .grid(4))
+              .padding(.bottom, 50) // input field height
+              .padding(.bottom, .grid(6)) // input field bottom padding
+              .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.isLoading)
+              .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: viewStore.conversation.messages)
 
             AnyView(Text(lastId).frame(width: 0, height: 0)).id(lastId)
           }
-          .padding(.horizontal, .grid(6))
-          .onChange(of: lastId) { lastId in
-            withAnimation {
-              scrollReader.scrollTo(lastId)
+            .padding(.horizontal, .grid(6))
+            .onChange(of: lastId) { lastId in
+              withAnimation(.easeInOut(duration: 0.3).delay(0.3)) {
+                scrollReader.scrollTo(lastId)
+              }
             }
-          }
-          .onAppear {
-            withAnimation {
-              scrollReader.scrollTo(lastId)
+            .onAppear {
+              withAnimation {
+                scrollReader.scrollTo(lastId)
+              }
             }
-          }
         }
+          .textSelection(.enabled)
 
         ZStack {
           if viewStore.isLoading {
@@ -203,8 +193,7 @@ public struct ChatView: View {
           .fill(Color.white)
       }
     }
-    .alert(store.scope(state: \.alert),
-           dismiss: .binding(.set(\.$alert, nil)))
+    .frame(minWidth: 200, minHeight: 200)
     .enableInjection()
   }
 }
@@ -215,7 +204,7 @@ public struct ChatView: View {
       NavigationView {
         ChatView(
           store: Store(
-            initialState: Chat.State(),
+            initialState: Chat.State(conversation: .fixture),
             reducer: Chat()
           )
         )

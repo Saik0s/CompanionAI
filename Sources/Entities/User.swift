@@ -1,5 +1,15 @@
 import Foundation
 
 public struct User: Hashable, Codable {
-  let name: String
+  public var name: String
+
+  public init(name: String) {
+    self.name = name
+  }
 }
+
+#if DEBUG
+public extension User {
+  static let fixture = User(name: "MockUser")
+}
+#endif

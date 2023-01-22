@@ -8,10 +8,11 @@ struct CompanionAIApp: App {
     WindowGroup {
       AppFeatureView(
         store: Store(
-          initialState: UserDefaults.standard.appState ?? AppFeature.State(),
+          initialState: AppFeature.State(),
           reducer: AppFeature()
         )
       )
+      .preferredColorScheme(.light)
       .task {
         NSApplication.shared.windows.first?.level = .floating
       }

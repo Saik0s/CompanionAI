@@ -20,9 +20,6 @@ public struct ChatInputField: ReducerProtocol {
 
     Reduce { _, action in
       switch action {
-      case .binding(\.$text):
-        return .none
-
       case .binding:
         return .none
 
@@ -64,15 +61,9 @@ public struct ChatInputFieldView: View {
           Image(systemName: "paperplane.fill")
             .resizable()
             .frame(width: 20, height: 20)
-            .foregroundColor(.white)
             .frame(width: 34, height: 34)
-            .background {
-              RoundedRectangle(cornerRadius: .grid(2))
-                .fill(Color.systemBlue)
-            }
         }
-        .buttonStyle(.borderless)
-        .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
+        .actionButtonStyle()
       }
       .padding(.horizontal, .grid(2))
       .frame(minHeight: 50)

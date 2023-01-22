@@ -6,111 +6,91 @@ import OpenAI
 // MARK: - ChatClient
 
 public struct ChatClient {
+  public var getConversationWithBot: (Bot) async throws -> Conversation
+  public var saveConversation: (Conversation) async throws -> Void
   public var generateAnswerForConversation: (Conversation) async throws -> String
   public var calculateEmbeddingForMessage: (Message) async throws -> [Double]
   public var cosineSimilarity: ([Double], [Double]) -> Double
 }
 
-// MARK: - ChatClientError
-
-public enum ChatClientError: Error {
-  case noChoices
-}
-
-// MARK: - ChatClient + DependencyKey
+// MARK: DependencyKey
 
 extension ChatClient: DependencyKey {
-  public static let liveValue: Self = {
-    let openAI = OpenAI(apiToken: ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!)
+  public static let liveValue: Self = .init(
+    getConversationWithBot: { bot in
+      let appSupportURL = try DataSources.getApplicationSupportURL()
+      let conversationURL = appSupportURL.appendingPathComponent("\(bot.id.uuidString).json")
+      log.verbose("Conversation URL: \(conversationURL.absoluteString)")
 
-    return Self(
-      generateAnswerForConversation: { conversation in
-        let chat = conversation.messages
-          .map { $0.participant.name + ": " + $0.text }
-          .joined(separator: "\n\n")
+      if let conversation = try? Conversation(fromFile: conversationURL) {
+        return conversation
+      }
 
-        let prompt =
-          """
-          The following is a conversation with a product manager(PM) for a mobile application. The product manager is helpful, creative, clever, and very friendly.
+      @Dependency(\.configClient) var configClient
+      var config = try configClient.getConfig()
+      var user = User(name: config.userName)
+      var conversation = Conversation(bot: bot, user: user, startingPrompt: config.conversationStartingPrompt)
 
-          Client: Hello, who are you?
-          PM: As a product manager, I am ready to take on the development of a new mobile app. I will be provided with a brief description of the app's features and target audience, and it is my responsibility to create a detailed plan for the app's development. This will include a marketing strategy, a development schedule, and a list of potential monetization options. I will also identify potential features and improvements that can be added to the app in the future. Additionally, I will be able to recognize potential risks and come up with a plan to mitigate them. My approach will be to provide clear and concise responses without any additional explanations. What will be my first task?
-          \(chat)
+      conversation.messages = [
+        Message(text: config.userStartingMessage, participant: .user(user), timestamp: Date().timeIntervalSince1970),
+        Message(text: bot.greeting, participant: .bot(bot), timestamp: Date().timeIntervalSince1970),
+      ]
 
-          \(conversation.bot.name):
-          """
-        let query = OpenAI.CompletionsQuery(
-          model: .textDavinci_003,
-          prompt: prompt,
-          temperature: 0.7,
-          max_tokens: 700,
-          top_p: 1,
-          frequency_penalty: 0,
-          presence_penalty: 0
-        )
+      try conversation.write(toFile: conversationURL)
+      return conversation
+    },
+    saveConversation: { conversation in
+      let appSupportURL = try DataSources.getApplicationSupportURL()
+      let conversationURL = appSupportURL.appendingPathComponent("\(conversation.bot.id.uuidString).json")
+      try conversation.write(toFile: conversationURL)
+    },
+    generateAnswerForConversation: { conversation in
+      @Dependency(\.configClient) var configClient
+      var config = try configClient.getConfig()
+      var promptMessages: [Message] = []
+      var messages = conversation.messages
 
-        let result = try await openAI.completions(query: query)
+      if messages.count > config.firstMessagesForContextCount + config.lastMessagesForContextCount {
+        promptMessages.append(contentsOf: messages.prefix(config.firstMessagesForContextCount))
+        messages.removeFirst(config.firstMessagesForContextCount)
+        promptMessages.append(contentsOf: messages.prefix(config.lastMessagesForContextCount))
+        messages.removeFirst(config.lastMessagesForContextCount)
+      } else {
+        promptMessages = messages
+      }
 
-        if let text = result.choices.first?.text {
-          return text.trimmingCharacters(in: .whitespacesAndNewlines)
-        } else {
-          throw ChatClientError.noChoices
-        }
-      },
-      calculateEmbeddingForMessage: { message in
-        let query = OpenAI.EmbeddingsQuery(model: .textEmbeddingAda, input: message.text)
-        let result = try await openAI.embeddings(query: query)
-        return result.data.first?.embedding ?? []
-      },
-      cosineSimilarity: Vector.cosineSimilarity(a:b:)
-    )
-  }()
+      while promptMessages.map(\.text).joined().count > 8000 {
+        promptMessages.remove(at: promptMessages.count / 2)
+      }
+
+      let chat = conversation.messages
+        .map { $0.participant.name + ": " + $0.text }
+        .joined(separator: "\n")
+
+      let prompt =
+        """
+        \(conversation.startingPrompt)
+
+        \(chat)
+        \(conversation.bot.name):
+        """
+
+      let completion = try await DataSources.generateCompletion(for: prompt, temperature: 0.7, max_tokens: 700)
+      return completion
+    },
+    calculateEmbeddingForMessage: { message in
+      log.verbose("Calculating embedding for message: \(message.id)")
+      let query = OpenAI.EmbeddingsQuery(model: .textEmbeddingAda, input: message.text)
+      let result = try await DataSources.openAI.embeddings(query: query)
+      return result.data.first?.embedding ?? []
+    },
+    cosineSimilarity: Vector.cosineSimilarity(a:b:)
+  )
 }
 
 extension DependencyValues {
   var chatClient: ChatClient {
     get { self[ChatClient.self] }
     set { self[ChatClient.self] = newValue }
-  }
-}
-
-private extension OpenAI {
-  func completions(query: CompletionsQuery) async throws -> CompletionsResult {
-    try await withCheckedThrowingContinuation { continuation in
-      completions(query: query) { result in
-        switch result {
-        case let .success(result):
-          continuation.resume(returning: result)
-        case let .failure(error):
-          continuation.resume(throwing: error)
-        }
-      }
-    }
-  }
-
-  func embeddings(query: EmbeddingsQuery) async throws -> EmbeddingsResult {
-    try await withCheckedThrowingContinuation { continuation in
-      embeddings(query: query) { result in
-        switch result {
-        case let .success(result):
-          continuation.resume(returning: result)
-        case let .failure(error):
-          continuation.resume(throwing: error)
-        }
-      }
-    }
-  }
-
-  func images(query: ImagesQuery) async throws -> ImagesResult {
-    try await withCheckedThrowingContinuation { continuation in
-      images(query: query) { result in
-        switch result {
-        case let .success(result):
-          continuation.resume(returning: result)
-        case let .failure(error):
-          continuation.resume(throwing: error)
-        }
-      }
-    }
   }
 }

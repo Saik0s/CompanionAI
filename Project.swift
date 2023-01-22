@@ -18,9 +18,7 @@ func target(name: String) -> Target {
     product: .app,
     bundleId: "me.igortarasenko.\(name)",
     deploymentTarget: .macOS(targetVersion: "13.0"),
-    infoPlist: .extendingDefault(with: [
-      "UIUserInterfaceStyle": "Light",
-    ]),
+    infoPlist: .extendingDefault(with: []),
     sources: .paths([.relativeToManifest("Sources/**")]),
     resources: [
       "Resources/**",
