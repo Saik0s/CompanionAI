@@ -75,7 +75,7 @@ extension ChatClient: DependencyKey {
         \(conversation.bot.name):
         """
 
-      let completion = try await DataSources.generateCompletion(for: prompt, temperature: 0.7, max_tokens: 700)
+      let completion = try await DataSources.generateCompletion(for: prompt, temperature: 0.5, max_tokens: 700, frequency_penalty: 0.6)
       return completion
     },
     calculateEmbeddingForMessage: { message in
