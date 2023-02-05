@@ -37,6 +37,8 @@ public struct ChatInputFieldView: View {
 
   let store: StoreOf<ChatInputField>
 
+  @FocusState var isFocused: Bool
+
   public init(store: StoreOf<ChatInputField>) {
     self.store = store
   }
@@ -50,6 +52,7 @@ public struct ChatInputFieldView: View {
           prompt: Text("Type your message..."),
           axis: .vertical
         )
+        .focused($isFocused)
         .lineLimit(1...)
         .textFieldStyle(.plain)
         .onSubmit { viewStore.send(.sendButtonTapped) }
@@ -72,6 +75,7 @@ public struct ChatInputFieldView: View {
           .fill(Color.white)
           .shadow(color: .black.opacity(0.3), radius: 15, y: 10)
       }
+      .onAppear { isFocused = true }
     }
     .enableInjection()
   }

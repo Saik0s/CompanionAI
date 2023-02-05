@@ -3,7 +3,7 @@ import Foundation
 public struct Config: Hashable, Codable {
   public var openAIKey: String = ProcessInfo.processInfo.environment["OPENAI_API_KEY"] ?? ""
 
-  public var conversationStartingPrompt: String = "The following conversation uses a Professional and Informative writing style."
+  public var conversationStartingPrompt: String = "You are ChatGPT, a large language model trained by OpenAI. Answer conversationally. Do not answer as the user."
   public var userStartingMessage: String = "Define your responsibilities."
   public var userName: String = "User"
 

@@ -64,14 +64,20 @@ extension ChatClient: DependencyKey {
       }
 
       let chat = conversation.messages
-        .map { $0.participant.name + ": " + $0.text }
-        .joined(separator: "\n")
+        .map { "ChatGPT: " + $0.text }
+        .joined(separator: "\n\n\n\n")
+
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "YYYY-MM-dd"
 
       let prompt =
         """
-        \(conversation.startingPrompt)
+        \(conversation.startingPrompt) Current date: \(dateFormatter.string(from: Date()))
 
         \(chat)
+
+
+
         \(conversation.bot.name):
         """
 

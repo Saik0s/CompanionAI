@@ -9,8 +9,8 @@ public struct MenuBar: ReducerProtocol {
   public struct State: Equatable, Codable {
     @BindableState var text = ""
     var bots: [Bot] = []
-    @BindableState var selectedBot: Bot?
-    @BindableState var isCreationInProgress = false
+    @BindingState var selectedBot: Bot?
+    @BindingState var isCreationInProgress = false
 
     enum CodingKeys: String, CodingKey {
       case bots

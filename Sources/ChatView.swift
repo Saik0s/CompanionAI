@@ -7,9 +7,9 @@ import SwiftUI
 
 public struct Chat: ReducerProtocol {
   public struct State: Equatable, Codable {
-    @BindableState var conversation: Conversation
-    @BindableState var isLoading: Bool = false
-    @BindableState var chatInputField = ChatInputField.State()
+    @BindingState var conversation: Conversation
+    @BindingState var isLoading: Bool = false
+    @BindingState var chatInputField = ChatInputField.State()
     var embeddingCalculationInProgress: Set<UUID> = []
 
     enum CodingKeys: String, CodingKey {

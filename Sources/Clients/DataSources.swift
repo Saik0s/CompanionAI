@@ -21,13 +21,14 @@ public enum DataSources {
   static func generateCompletion(for prompt: String, temperature: Double = 0.7, max_tokens: Int = 700,
                                  frequency_penalty: Double = 0) async throws -> String {
     let query = OpenAI.CompletionsQuery(
-      model: .textDavinci_003,
+      model: .textChatDavinci,
       prompt: prompt,
       temperature: temperature,
       max_tokens: max_tokens,
       top_p: 1,
       frequency_penalty: frequency_penalty,
-      presence_penalty: 0
+      presence_penalty: 0,
+      stop: ["\n\n\n", "<|im_end|>"]
     )
 
     log.verbose("Generating completion")

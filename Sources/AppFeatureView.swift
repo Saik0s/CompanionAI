@@ -14,7 +14,7 @@ extension UserDefaults {
 
 public struct AppFeature: ReducerProtocol {
   public struct State: Equatable, Codable {
-    @BindableState var alert: AlertState<Action>?
+    @BindingState var alert: AlertState<Action>?
     var chat: Chat.State?
     var menuBar = MenuBar.State()
 
