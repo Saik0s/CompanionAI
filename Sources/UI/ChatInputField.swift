@@ -52,9 +52,9 @@ public struct ChatInputFieldView: View {
           prompt: Text("Type your message..."),
           axis: .vertical
         )
-        .focused($isFocused)
         .lineLimit(1...)
         .textFieldStyle(.plain)
+        .focused($isFocused)
         .onSubmit { viewStore.send(.sendButtonTapped) }
         .foregroundColor(.black)
         .font(.DS.bodyL)
